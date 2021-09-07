@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pagina web de entrada de un articulo">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,28 +32,28 @@
     </header>
 
     <main class="contenedor">
-        <h3 class="centrar-texto">Nuestros cursos y talleres</h3>
-        <img loading="lazy" src="img/blog1.jpg" alt="imagen del blog">
-        <p>
-            Nunc dapibus pharetra ipsum, eget pretium diam euismod eu. In aliquet, 
-            metus eget pharetra dignissim, tellus dolor congue tortor, facilisis rutrum 
-            lectus est in arcu. Cras egestas sollicitudin felis, id dignissim sapien 
-            scelerisque sed. Praesent sodales mattis fermentum. Duis eu dolor vitae massa 
-            posuere dapibus non in justo. Fusce vehicula leo id vulputate mattis. Phasellus 
-            efficitur at diam at venenatis. Aliquam molestie, eros et fermentum pretium, 
-            tortor velit laoreet nisl, at ornare augue purus non nisi. Sed at iaculis metus. 
-            Morbi egestas est et sapien cursus, eget aliquet magna suscipit.
-        </p><p>
-            Nam malesuada, nunc et egestas eleifend, ligula nunc euismod ex, vitae commodo 
-            orci ligula sit amet elit. Cras sed diam arcu. Aliquam at finibus dui, id faucibus 
-            dui. Quisque bibendum consectetur enim, nec sodales ipsum porttitor eu. Interdum 
-            et malesuada fames ac ante ipsum primis in faucibus. Ut in leo vehicula, cursus 
-            tellus eu, aliquet magna. Integer diam leo, tincidunt eget augue vestibulum, 
-            bibendum facilisis nisi. Vivamus a orci sit amet nunc viverra bibendum ut vel 
-            tellus. Curabitur sit amet eleifend eros. Fusce imperdiet vulputate dui id 
-            tincidunt. Morbi eget luctus dui, quis rutrum enim. Nam mollis faucibus 
-            scelerisque.
-        </p>
+        <h3 class="centrar-texto">Contacto</h3>
+        <div class="contacto-bg"></div>
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre</label>
+                <input class="campo__field" type="text" placeholder="Nombre" id="nombre">
+            </div>
+
+            <div class="campo">
+                <label class="campo__label" for="email">E-mail</label>
+                <input class="campo__field" type="email" placeholder="E-mail" id="email">
+            </div>
+
+            <div class="campo">
+                <label class="campo__label" for="mensaje">Mensaje</label>
+                <textarea class="campo__field campo__field--textarea" id="mensaje"></textarea>
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Enviar" class="boton boton--primario">
+            </div>
+        </form>
     </main>
     <footer class="footer">
         <div class="contenedor">
@@ -70,6 +69,5 @@
             </div>
         </div>
     </footer>
-    <script src="js/modernizr.js"></script>
 </body>
 </html>

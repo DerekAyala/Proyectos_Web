@@ -77,9 +77,15 @@ img{
 }
 
 /**header**/
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
 
 .header{
-    background-image: url(../img/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -172,6 +178,7 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 
 @media (min-width: 768px) {  
@@ -179,12 +186,19 @@ img{
         display:inline-block;
     }
 }
+
+.boton:hover{
+    cursor: pointer;
+}
+
 .boton--primario{
     background-color: var(--negro);
 }
+
 .boton--secundario{
     background-color: var(--primario)
 }
+
 /**cursos**/
 
 .cursos{
@@ -255,4 +269,40 @@ img{
         grid-template-columns: 1fr 2fr;
         column-gap: 2rem;
     }
+}
+
+/**contacto**/
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height:40rem;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 3rem;
+}
+
+.campo{
+    display:flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.campo__label{
+    flex: 0 0 9rem;
+    text-align: right;
+}
+
+.campo__field{
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea{
+    height: 20rem;
 }
