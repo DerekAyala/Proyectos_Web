@@ -7,6 +7,6 @@ boton.addEventListener('click',function(){
 
 if(Notification.permission =='granted'){
     new Notification('esta es una notificacion',{
-        
+        body: 'Hola como tas'
     })
 }
