@@ -21,14 +21,14 @@ function minificarCSS(){
 }
 
 function watchArchivos(){
-    watch("./src/scss/app.scss", css);
+    watch("./src/scss/**/*.scss", css); // * = carpeta actual  **/* = varias carpetas
 }
 
-exports.watchArchivos = watchArchivos;
+
 
 exports.css = css;
 exports.minificarCSS = minificarCSS;
-
+exports.watchArchivos = watchArchivos;
 
 /*
 function hola(done){
