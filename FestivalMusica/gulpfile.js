@@ -1,6 +1,7 @@
 const { series , parallel , src , dest , watch} = require('gulp');
 
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
+const imagemin = require('gulp-imagemin');
 
 // funcion que compila sass
 
@@ -20,6 +21,10 @@ function minificarCSS(){
         .pipe( dest('./build/css') )
 }
 
+function imagenes(){
+    return src('./src/img/**/*').pipe( imagemin()).pipe(dest('./build/img' ))
+}
+
 function watchArchivos(){
     watch("./src/scss/**/*.scss", css); // * = carpeta actual  **/* = varias carpetas
 }
@@ -29,7 +34,7 @@ function watchArchivos(){
 exports.css = css;
 exports.minificarCSS = minificarCSS;
 exports.watchArchivos = watchArchivos;
-
+exports.imagenes = imagenes;
 /*
 function hola(done){
     console.log('Hola mundo en Gulp');

@@ -1,9 +1,10 @@
+
 .header{
     background-color: $verde;
 
     
     .contenido-header{
-        padding: $separacion/2 0;
+        padding: 2.5rem 0;
         @include tablet {
             display: flex;
             justify-content: space-between;
