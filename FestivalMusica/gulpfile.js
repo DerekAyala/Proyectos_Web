@@ -2,7 +2,8 @@ const { series , parallel , src , dest , watch} = require('gulp');
 
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
-
+const notfy = require('gulp-notify');
+const { notify } = require('node-notifier');
 // funcion que compila sass
 
 function css(){
@@ -22,7 +23,7 @@ function minificarCSS(){
 }
 
 function imagenes(){
-    return src('./src/img/**/*').pipe( imagemin()).pipe(dest('./build/img' ))
+    return src('./src/img/**/*').pipe( imagemin()).pipe(dest('./build/img' )).pipe( notify({message: 'Imagenes Mninifada'}))
 }
 
 function watchArchivos(){
