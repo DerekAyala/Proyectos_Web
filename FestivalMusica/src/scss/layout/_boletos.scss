@@ -1,61 +1,66 @@
-.boletos{
-    padding: $separacion 0;
-    h3{
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boletos {
+    padding: 5rem 0;
+    h3 {
         text-align: center;
-        color: $blanco;
+        color: v.$blanco;
+        margin-bottom: 2rem;
+    }
+
+    .contenedor-boletos {
+
+        @include m.tablet {
+            @include m.grid(2, 5rem);
+        }
     }
 }
 
-.contenedor-boletos{
-    margin-top: $separacion/2;
-    @include tablet{
-        @include grid(2,$separacion)
+.pase {
+    color: black;
+
+
+    .nombre-pase {
+        text-align: center;
+        font-size: 2.8rem;
+        color: v.$blanco;
     }
-    
-    .plan{
-        p{
-            color: $blanco;
-            font-size: 2.4rem;
+    &-header,
+    &-footer  {
+        padding: .5rem;
+        p {
             text-align: center;
-            margin-bottom: 2rem;
+            color: v.$blanco;
+            margin: 0;
         }
     }
-}
-.pase{
-    width: 100%;
-    border-spacing: 0;
-    thead{
-        background-color: $rosa;
-        th{
-            padding: $separacion/4;
-            color: $blanco;
+
+    &-header {
+        background-color: v.$rosa;
+        p {
             text-transform: uppercase;
-            font-weight: $delgada;
-            font-size: 2rem;
+            font-size: 1.6rem;
         }
     }
-    tbody{
-        background-color: $blanco;
-        td{
-            padding: $separacion/4;
-            border-bottom: 1px solid #e1e1e1;
-        }
-        tr{
-            &:last-of-type{
-                td {
-                    border: none;
-                }
+    &-body {
+        background-color: v.$blanco;
+
+        ul {
+            @include m.resetear-lista;
+            li, 
+            :nth-child(odd) {
+                background-color: v.$blanco;
+                padding: 1rem;
+                border-bottom: 1px solid #e1e1e1;
             }
         }
     }
-    tfoot{
-        background-color: $morado;
-        td{
-            padding: $separacion/4;
-            color: $blanco;
-            text-align: center;
-            font-size: 2.5rem;
+    &-footer {
+        background-color: v.$morado;
+        p {
+            font-size: 2.4rem;
+            font-weight: 700;
         }
-        
     }
 }

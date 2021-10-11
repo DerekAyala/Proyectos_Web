@@ -1,40 +1,47 @@
-.video{
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.video {
     position: relative;
     max-height: 70rem;
+    min-height: 50rem;
     overflow: hidden;
-    .overlay{
+
+    .overlay {
         position: absolute;
-        width: 100%;
+        background: rgb(126,2,195);
+        background: linear-gradient(270deg, rgba(126,2,195,0.5) 0%, rgba(255,0,110,0.3) 100%);
         height: 100%;
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#891c1e+0,9e37f2+65,ffffff+100&0.8+0,0.5+100 */
-        background: -moz-linear-gradient(-45deg,  rgba(137,28,30,0.8) 0%, rgba(158,55,242,0.61) 65%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(-45deg,  rgba(137,28,30,0.8) 0%,rgba(158,55,242,0.61) 65%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(135deg,  rgba(137,28,30,0.8) 0%,rgba(158,55,242,0.61) 65%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc891c1e', endColorstr='#80ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    }
-
-    .contenido-video{
+        width: 100%;
         display: flex;
-        align-items: center;
-        height: 100%;
-        color: $blanco;
-        position: relative;
-        z-index: 1;
-        h2{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            font-size: 7rem;
-        }
-        span{
-            background-color: $rosa;
-            font-size: 2rem;
-            padding: 1rem 2rem;
-        }
+        flex-direction: column;
+        justify-content: center;
     }
 
-    video{
+    video {
+        width: auto;
         display: block;
-        width: 100%;
+        @include m.desktop {
+            width: 100%;
+        }
+    }
+}
+
+
+.contenido-video {
+    z-index: 10 ;
+    h2 {
+        color: v.$blanco;
+        font-size: 7rem;
+        margin: 0;
+    }
+    p {
+        background-color: v.$rosa;
+        display: inline-block;
+        padding: 1rem 2rem;
+        color: v.$blanco;
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin: 0;
     }
 }
