@@ -18,9 +18,11 @@ function navegacionFija() {
         if( sobreFestival.getBoundingClientRect().bottom < 0  ) {
             barra.classList.add('fijo');
             body.classList.add('body-scroll');
+            barra.classList.remove('contenedor');
         } else {
             barra.classList.remove('fijo');
             body.classList.remove('body-scroll');
+            barra.classList.add('contenedor');
         }
     });
 }
@@ -30,6 +32,7 @@ function scrollNav() {
     const enlaces = document.querySelectorAll('.navegacion-principal a');
 
     enlaces.forEach( enlace => {
+        console.log(enlace)
         enlace.addEventListener('click', function(e) {
             e.preventDefault();
 

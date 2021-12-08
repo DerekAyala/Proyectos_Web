@@ -220,5 +220,17 @@
 
 
     <script src="build/js/app.js"></script>
+    <script type="text/javascript">
+        (function(w, d, x, id){
+        s=d.createElement('script');
+        s.src='https://d2s9x5slbvr0vu.cloudfront.net/amazon-connect-chat-interface-client.js';
+        s.async=1;
+        s.id=id;
+        d.getElementsByTagName('head')[0].appendChild(s);
+        w[x] =  w[x] || function() { (w[x].ac = w[x].ac || []).push(arguments) };
+        })(window, document, 'amazon_connect', '72b30cda-9dac-4a65-9e7a-71a8b9e58bdd');
+        amazon_connect('styles', { openChat: { color: 'white', backgroundColor: '#123456'}, closeChat: { color: 'white', backgroundColor: '#123456'} });
+        amazon_connect('snippetId', 'QVFJREFIZ2FmaHlLVlhzMXdOM213U09zSVJiNFhEdjVTNFI4YWdlakN5c2NqL2w4R2dFKzFPMmp4WW1tT3pRZ2gxRnI0b0d3QUFBQWJqQnNCZ2txaGtpRzl3MEJCd2FnWHpCZEFnRUFNRmdHQ1NxR1NJYjNEUUVIQVRBZUJnbGdoa2dCWlFNRUFTNHdFUVFNT0ZUK0JmaUQ5aGFiNjNDdUFnRVFnQ3NmWjhXWGRZTEpteEtuTU9UcGZSVklOenZWbTltRG1ScGY5WWVpTzI2c1NLQ21PZHEzMDczamIwb3c6OlpjZWtLMnZXQmFNZ1RadmkyUHZjVEhGWHFqSEEreVg2Uk1ZaDNtREgrYXB4Q1dNMkxBWXoyaFppRDFoK1pjNTRTbkRYL0VlbnF1R3JYNzh5ZzU5YkNjUkpQSEUxTlY5SWtHUVNkZG4vKzdZQW5KbTdYZFMycmswdjhwRkhEQVFwdHR5TVVqcWdGb2JVTFltUzB3NVRBbnlVcjlqTVFIVT0=');
+    </script>
 </body>
 </html>
